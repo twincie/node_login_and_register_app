@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <% if (messages.error) { %>
+        <p style="color:red"><%- messages.error %></p>
+        <% } %>
+        <% if (messages.success) { %>
+        <p style="color:green"><%- messages.success %></p>
+        <% } %>
+
+        <center><h3>Sign Up</h3></center>
+        <form action="" method="post" name="form 1">
+            <div class="form-floating mb-3">
+              <label for="floatingInput">Name</label>
+                <input type="name" class="form-control" placeholder="name" name="name">
+            </div>
+            <div class="form-floating mb-3">
+              <label for="floatingInput">Email address</label>
+              <input type="email" class="form-control" placeholder="name@example.com" name="email">
+            </div>
+            <div class="form-floating">
+              <label for="floatingPassword">Password</label>
+              <input type="password" class="form-control" placeholder="Password" name="password">
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+            <br>
+            go to login in page
+            <a href="signin">sign in here</a>
+        </form>
+    </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
